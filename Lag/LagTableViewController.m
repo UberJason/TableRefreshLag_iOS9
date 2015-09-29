@@ -25,6 +25,14 @@
 
 -(void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
+    
+    // This animation runs smoothly on an iPhone 6 running iOS 8.4.1,
+    // but choppily on an iPhone 6S running iOS 9.0.1 despite the superior hardware.
+    // Both of the below implementations show this lag on iOS 9.0.1.
+    
+    /****************************************************************/
+    // Implementation A: calling reloadSections:withRowAnimation: once on a single indexSet with multiple indices
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
     for(NSInteger i = 0; i < 7; i++) {
         if([self.insertOrReload[i] boolValue]) {
             if(editing)
@@ -33,9 +41,22 @@
                 [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:i]] withRowAnimation:UITableViewRowAnimationFade];
         }
         else
-            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:i] withRowAnimation:UITableViewRowAnimationFade];
-
+            [indexSet addIndex:i];
     }
+    [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+    /****************************************************************/
+    // Implementation B: calling reloadSections:withRowAnimation: multiple times on a single index each time
+    //    for(NSInteger i = 0; i < 7; i++) {
+    //        if([self.insertOrReload[i] boolValue]) {
+    //            if(editing)
+    //                [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:i]] withRowAnimation:UITableViewRowAnimationFade];
+    //            else
+    //                [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:i]] withRowAnimation:UITableViewRowAnimationFade];
+    //        }
+    //        else
+    //            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:i] withRowAnimation:UITableViewRowAnimationFade];
+    //    }
+    /****************************************************************/
 }
 
 #pragma mark - Table view data source
