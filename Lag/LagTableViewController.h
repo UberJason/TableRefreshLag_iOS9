@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LagTableViewController.h
 //  Lag
 //
 //  Created by Jason Ji on 9/28/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LagTableViewController : UITableViewController
 
 @end
-

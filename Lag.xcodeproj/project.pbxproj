@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		968A3CCD1BBA2552007A9BB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CCC1BBA2552007A9BB4 /* main.m */; };
 		968A3CD01BBA2552007A9BB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CCF1BBA2552007A9BB4 /* AppDelegate.m */; };
-		968A3CD31BBA2552007A9BB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CD21BBA2552007A9BB4 /* ViewController.m */; };
 		968A3CD61BBA2552007A9BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968A3CD41BBA2552007A9BB4 /* Main.storyboard */; };
 		968A3CD81BBA2552007A9BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968A3CD71BBA2552007A9BB4 /* Assets.xcassets */; };
 		968A3CDB1BBA2552007A9BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968A3CD91BBA2552007A9BB4 /* LaunchScreen.storyboard */; };
 		968A3CE61BBA2552007A9BB4 /* LagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CE51BBA2552007A9BB4 /* LagTests.m */; };
 		968A3CF11BBA2552007A9BB4 /* LagUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CF01BBA2552007A9BB4 /* LagUITests.m */; };
+		968A3D001BBA255B007A9BB4 /* LagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968A3CFF1BBA255B007A9BB4 /* LagTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		968A3CCC1BBA2552007A9BB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		968A3CCE1BBA2552007A9BB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		968A3CCF1BBA2552007A9BB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		968A3CD11BBA2552007A9BB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		968A3CD21BBA2552007A9BB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		968A3CD51BBA2552007A9BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		968A3CD71BBA2552007A9BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968A3CDA1BBA2552007A9BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		968A3CEC1BBA2552007A9BB4 /* LagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A3CF01BBA2552007A9BB4 /* LagUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LagUITests.m; sourceTree = "<group>"; };
 		968A3CF21BBA2552007A9BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968A3CFE1BBA255B007A9BB4 /* LagTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LagTableViewController.h; sourceTree = "<group>"; };
+		968A3CFF1BBA255B007A9BB4 /* LagTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LagTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 			children = (
 				968A3CCE1BBA2552007A9BB4 /* AppDelegate.h */,
 				968A3CCF1BBA2552007A9BB4 /* AppDelegate.m */,
-				968A3CD11BBA2552007A9BB4 /* ViewController.h */,
-				968A3CD21BBA2552007A9BB4 /* ViewController.m */,
+				968A3CFE1BBA255B007A9BB4 /* LagTableViewController.h */,
+				968A3CFF1BBA255B007A9BB4 /* LagTableViewController.m */,
 				968A3CD41BBA2552007A9BB4 /* Main.storyboard */,
 				968A3CD71BBA2552007A9BB4 /* Assets.xcassets */,
 				968A3CD91BBA2552007A9BB4 /* LaunchScreen.storyboard */,
@@ -270,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				968A3CD31BBA2552007A9BB4 /* ViewController.m in Sources */,
 				968A3CD01BBA2552007A9BB4 /* AppDelegate.m in Sources */,
+				968A3D001BBA255B007A9BB4 /* LagTableViewController.m in Sources */,
 				968A3CCD1BBA2552007A9BB4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
